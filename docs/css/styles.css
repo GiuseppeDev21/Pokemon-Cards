@@ -262,6 +262,8 @@ color: #edf0f1;
   box-shadow: 3px 3px 3px var(--flying__bs);
   border: 1px solid var(--flying__ln);
   position: relative;
+  opacity: 1;
+  animation: pokebody 3s ;
 }
 #bug{
   background-color: var(--bug__bg);
@@ -373,8 +375,6 @@ color: #edf0f1;
 } 
 
 
-
-
 .poke__cardB--d1{
   width: 288px;
   height: 150px;
@@ -406,18 +406,14 @@ color: #edf0f1;
   left: 80px;
   z-index: 0;
 }
-.poke__element--1,.poke__element--2{
+.poke__element--1{
   width: 63px;
   height: 73px;
   left: 220px;
   position: absolute;
-}
-.poke__element--1{
   top: 10px;
 }
-.poke__element--2{  
-  top: 85px;
-}
+
 .poke__cardB--d2{
   width: 401px;
   height: 236px;
@@ -488,13 +484,14 @@ width: 60%;
 
 
 
+@keyframes pokebody {
+  from{opacity: 0;}to{opacity: 1;}
+}
 @keyframes pokebody_2 {
   from{transform: translateX(600px);opacity: 0;}
   to{transform: translateX(0px);opacity: 1;}
 }
-@keyframes pokebody {
-  from{opacity: 0;}to{opacity: 1;}
-}
+
 
 @media screen and (max-height: 570px) {
   .overlay a {
