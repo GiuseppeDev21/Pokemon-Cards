@@ -263,6 +263,7 @@ color: #edf0f1;
   border: 1px solid var(--flying__ln);
   position: relative;
   opacity: 1;
+  background-color: #00CCCC;
   animation: pokebody 3s ;
 }
 #bug{
@@ -463,8 +464,11 @@ width: 60%;
 }
 /*/////////// poke body end ///////*/
 
-
-
+#final{
+  width: 100%;
+  margin-top: 180px;
+  height: 400px;
+}
 
 
 

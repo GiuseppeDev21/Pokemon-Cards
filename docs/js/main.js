@@ -48,8 +48,8 @@ const Pokemon = (pokemon) =>{
          break;
         case "dark"://absol
          poke__cardB.setAttribute("class","poke__cardB");
-         poke__cardB.setAttribute("id","dark");
          poke__element_1.src='img/dark.png' ;
+         poke__cardB.setAttribute("id","dark");
          break;
         case "dragon"://dragonite
          poke__cardB.setAttribute("class","poke__cardB");
@@ -109,7 +109,7 @@ const Pokemon = (pokemon) =>{
          case "poison"://muk
          poke__cardB.setAttribute("class","poke__cardB");
          poke__cardB.setAttribute("id","poison");
-         poke__element_1.src='https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Pok%C3%A9mon_Fire_Type_Icon.svg/1200px-Pok%C3%A9mon_Fire_Type_Icon.svg.png' ;
+         poke__element_1.src='img/poison.png' ;
          break;
          case "psychic"://gardevoir
          poke__cardB.setAttribute("class","poke__cardB");
@@ -129,7 +129,7 @@ const Pokemon = (pokemon) =>{
          case "water"://greninja
          poke__cardB.setAttribute("class","poke__cardB");
          poke__cardB.setAttribute("id","water");
-         poke__element_1.src='img/water.png';
+         poke__element_1.src='water.png';
          break;
         default:
           break;
