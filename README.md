@@ -1,2 +1,2 @@
-# pokepage
+# PokeCards
  pokemon cards
