@@ -543,73 +543,68 @@ header {
     top: 0px;
     right: 35px;
   }
-  
-  @media only screen and (max-width: 800px) {
-    .logo img {
-      width: 300px;
-    }
-    .nav__links,
-    .cta {
-      display: none;
-  }
-  .menu {
-    display: initial;
-  }
-  .header__wave {
-    margin-top: 144px;
-  }
+}
 
-  .container {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    margin-top: -50px;
+@media only screen and (max-width: 800px) {
+  .logo img {
+    width: 300px;
   }
+  .nav__links,
+  .cta {
+    display: none;
+}
+.menu {
+  display: initial;
+}
+.header__wave {
+  margin-top: 144px;
+}
 
-  .container p {
-    margin-top: -30px;
-    font-size: 18px;
-    overflow: hidden;
-    padding: 30px;
-  }
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: -50px;
+}
 
-  .container img {
-    width: 70%;
-    height: 70%;
-    margin: 0 auto;
-    margin-top: -30px;
-  }
+.container p {
+  margin-top: -30px;
+  font-size: 18px;
+  overflow: hidden;
+  padding: 30px;
+}
 
-  .btn-primary {
-    width: 50%;
-    margin-left: 5%;
-  }
-  .btn-secondary {
-    width: 35%;
-    margin-left: 5%;
-  }
+.container img {
+  width: 50%;
+  height: 50%;
+  margin: 0 auto;
+  margin-top: -30px;
+  background-color: #040707;
+}
+/* 
+.poke__cardB {
+  width: 350px;
+} */
 
-  .poke__container {
-    width: 100%;
-  }
+.btn-primary {
+  width: 50%;
+  margin-left: 5%;
+}
+.btn-secondary {
+  width: 35%;
+  margin-left: 5%;
+}
 
-  .poke__cardB__ghost {
-    width: 92%;
-    height: 478px;
-    margin-bottom: 30px;
-  }
+.poke__container {
+  width: 100%;
+}
 
-  .poke__cardB--d2 {
-    width: 322px;
-    height: 236px;
-    margin: 0 auto;
-    margin-top: 20px;
-    /* background-color: #edf0f1; */
-  }
+.poke__cardB {
+  width: 380px;
+}
 
-  .poke__basestats-1 p,
-  .poke__basestats-2 p {
-    font-size: 18px;
-  }
+.poke__basestats-1 p,
+.poke__basestats-2 p {
+  font-size: 18px;
 }
 }
