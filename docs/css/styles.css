@@ -294,10 +294,109 @@ header {
 /*//////////    body         ///////*/
 
 /*/////////// poke nav   ///////*/
+.poke__ball{
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  width: 100px;
+  margin: 0 auto;
+}
+
+.poke__ball_img0{
+  position: absolute;
+  margin-left: -300px;
+  animation: poke__ball_img0 4s 4s infinite;
+}
+@keyframes poke__ball_img0 {
+  0%{transform: rotateZ(0deg);}
+  25%{transform: rotatez(-40deg);margin-left: -600px;}
+  50%{transform: rotatez(40deg);}
+  75%{transform: rotatez(-40deg);margin-left: -600px;}
+  100%{transform: rotatez(360deg);}
+}
+
+.poke__ball_img1{
+  position: absolute;
+  margin-left: -200px;
+  animation: poke__ball_img1 4s 4s infinite;
+}
+@keyframes poke__ball_img1 {
+  0%{transform: rotateZ(0deg);}
+  25%{transform: rotatez(-40deg);margin-left: -400px;}
+  50%{transform: rotatez(40deg);}
+  75%{transform: rotatez(-40deg);margin-left: -400px;}
+  100%{transform: rotatez(360deg);}
+}
+
+.poke__ball_img2{
+  position: absolute;
+  margin-left: -100px;
+  animation: poke__ball_img2 4s 4s infinite;
+}
+
+@keyframes poke__ball_img2 {
+  0%{transform: rotateZ(0deg);}
+  25%{transform: rotatez(-40deg);margin-left: -200px;}
+  50%{transform: rotatez(40deg);}
+  75%{transform: rotatez(-40deg);margin-left: -200px;}
+  100%{transform: rotatez(360deg);}
+}
+
+.poke__ball_img3{
+  position: absolute;
+  animation: poke__ball_img3 4s 4s infinite;
+}
+@keyframes poke__ball_img3 {
+  0%{transform: rotateZ(0deg);}
+  25%{transform: rotatez(-40deg);}
+  50%{transform: rotatez(40deg);}
+  75%{transform: rotatez(-40deg);}
+  100%{transform: rotatez(360deg);}
+}
+
+.poke__ball_img4{
+  position: absolute;
+  margin-left: 100px;
+  animation: poke__ball_img4 4s 4s infinite;
+}
+@keyframes poke__ball_img4 {
+  0%{transform: rotateZ(0deg);}
+  25%{transform: rotatez(-40deg);margin-left: 200px;}
+  50%{transform: rotatez(40deg);}
+  75%{transform: rotatez(-40deg);margin-left: 200px;}
+  100%{transform: rotatez(360deg);}
+}
+
+.poke__ball_img5{
+  position: absolute;
+  margin-left: 200px;
+  animation: poke__ball_img5 4s 4s infinite;
+}
+
+@keyframes poke__ball_img5 {
+  0%{transform: rotateZ(0deg);}
+  25%{transform: rotatez(-40deg);margin-left: 400px;}
+  50%{transform: rotatez(40deg);}
+  75%{transform: rotatez(-40deg);margin-left: 400px;}
+  100%{transform: rotatez(360deg);}
+}
+.poke__ball_img6{
+  position: absolute;
+  margin-left: 300px;
+  animation: poke__ball_img6 4s 4s infinite;
+}
+@keyframes poke__ball_img6 {
+  0%{transform: rotateZ(0deg);}
+  25%{transform: rotatez(-40deg);margin-left: 600px;}
+  50%{transform: rotatez(40deg);}
+  75%{transform: rotatez(-40deg);margin-left: 600px;}
+  100%{transform: rotatez(360deg);}
+}
+
 .pokemon__nav form {
   width: 100%;
   display: flex;
-  margin-top: 25px;
+  margin-top: 120px;
   /* background-color: rgba(23, 81, 175, 0.424); */
 }
 
@@ -614,6 +713,23 @@ header {
   margin-top: -30px;
 }
 
+.poke__ball{width: 100%;}
+
+.poke__ball_img0,.poke__ball_img1,.poke__ball_img2,.poke__ball_img3,.poke__ball_img4,.poke__ball_img5,.poke__ball_img6{
+  position:static;
+  width: 35px;
+  margin: 0 auto;
+  animation: poke__ball_img 4s infinite;
+}
+
+@keyframes poke__ball_img {
+  0%{transform: rotateZ(0deg);}
+  25%{transform: rotatez(-40deg);}
+  50%{transform: rotatez(40deg);}
+  75%{transform: rotatez(-40deg);}
+  100%{transform: rotatez(360deg);}
+}
+
 .poke__cardB {
   width: 350px;
 } 
@@ -621,10 +737,12 @@ header {
 .btn-primary {
   width: 50%;
   margin-left: 5%;
+  margin-top: -80px;
 }
 .btn-secondary {
   width: 35%;
   margin-left: 5%;
+  margin-top: -80px;
 }
 
 .poke__container {

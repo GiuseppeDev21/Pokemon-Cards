@@ -11,14 +11,15 @@ const Pokemon = (pokemon) => {
   fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}/`)
     .then((resp) => resp.json())
     .then((data) => crearPokemon(data))
-    .catch((error) => 
-    Swal.fire({
-      icon: 'error',
-      title: 'Something went wrong...',
-      text: 'Try to check again the Pokemon name!',
-    })
+    .catch((error) =>
+      Swal.fire({
+        icon: "error",
+        title: "Something went wrong...",
+        text: "Try to check again the Pokemon name!",
+      })
     );
 };
+
 
 const crearPokemon = (pokemon) => {
   const poke__cardB = document.createElement("div");
