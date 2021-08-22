@@ -22,20 +22,26 @@ const Pokemon = (pokemon) => {
 
 
 const crearPokemon = (pokemon) => {
-  let poke__type = [];
-  pokemon.types.forEach((element) => {
-    poke__array = element.type.name;
-   (poke__type[0] != poke__array) ? poke__type.push(poke__array) : alert("Error 404!");
-   console.log(poke__array);
-  });
-
-  console.log(poke__type);
-
   const poke__cardB = document.createElement("div");
   poke__cardB.setAttribute("class", "poke__cardB");
-  poke__cardB.setAttribute("id", poke__type[0]);
-  
-  const poke__cardB_d1 = document.createElement("div");
+
+  let eleicon = [];
+
+  pokemon.types.forEach((element) => {
+    poke__algo = element.type.name;
+    if (eleicon[0] != poke__algo) {
+      let nada = eleicon.push(poke__algo);
+       alert("elemento :"+ eleicon[0]);
+       alert("elemento :"+ eleicon[1]);
+       console.log(nada);
+       console.log(eleicon);
+      }
+    });
+    // alert(eleicon[0]+" elemento 0");
+    poke__cardB.setAttribute("id", eleicon[0]);
+    
+    console.log(eleicon);
+    const poke__cardB_d1 = document.createElement("div");
     poke__cardB_d1.setAttribute("class", "poke__cardB--d1");
     
     const poke__cardB_d2 = document.createElement("div");
@@ -53,18 +59,20 @@ const crearPokemon = (pokemon) => {
     poke__id.setAttribute("class", "poke__id");
     poke__id.textContent = "#" + pokemon.id;
     
-    if(poke__type[0] != undefined){
+
+    if(eleicon[0] != undefined){
       const poke__element = document.createElement("img");
-      poke__element.src ="./resources/types/"+poke__type[0]+".png";
+      poke__element.src ="/img/"+eleicon[0]+".png";
       poke__element.setAttribute("class","poke__element-1");
       poke__cardB_d1.appendChild(poke__element);
     } 
-    if(poke__type[1] != undefined){
+    if(eleicon[1] != undefined){
       const poke__element2 = document.createElement("img");
-      poke__element2.src ="./resources/types/"+poke__type[1]+".png";
+      poke__element2.src ="/img/"+eleicon[1]+".png";
       poke__element2.setAttribute("class","poke__element-2");
       poke__cardB_d1.appendChild(poke__element2);  
     }
+    
     
     div.appendChild(poke__cardB);
     poke__cardB.appendChild(poke__cardB_d1);
