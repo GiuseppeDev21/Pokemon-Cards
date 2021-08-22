@@ -31,6 +31,8 @@ const crearPokemon = (pokemon) => {
     poke__algo = element.type.name;
     if (eleicon[0] != poke__algo) {
       let nada = eleicon.push(poke__algo);
+       alert("elemento :"+ eleicon[0]);
+       alert("elemento :"+ eleicon[1]);
        console.log(nada);
        console.log(eleicon);
       }
