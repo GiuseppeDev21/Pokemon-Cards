@@ -25,22 +25,18 @@ const crearPokemon = (pokemon) => {
   const poke__cardB = document.createElement("div");
   poke__cardB.setAttribute("class", "poke__cardB");
 
-  let eleicon = [];
+  let poke__element = [];
 
   pokemon.types.forEach((element) => {
-    poke__algo = element.type.name;
-    if (eleicon[0] != poke__algo) {
-      let nada = eleicon.push(poke__algo);
-       alert("elemento :"+ eleicon[0]);
-       alert("elemento :"+ eleicon[1]);
-       console.log(nada);
-       console.log(eleicon);
+    poke__array = element.type.name;
+    if (poke__element[0] != poke__array) {
+      let element = poke__element.push(poke__array);
       }
     });
     // alert(eleicon[0]+" elemento 0");
-    poke__cardB.setAttribute("id", eleicon[0]);
+    poke__cardB.setAttribute("id", poke__element[0]);
     
-    console.log(eleicon);
+    console.log(poke__element);
     const poke__cardB_d1 = document.createElement("div");
     poke__cardB_d1.setAttribute("class", "poke__cardB--d1");
     
@@ -60,15 +56,15 @@ const crearPokemon = (pokemon) => {
     poke__id.textContent = "#" + pokemon.id;
     
 
-    if(eleicon[0] != undefined){
+    if(poke__element[0] != undefined){
       const poke__element = document.createElement("img");
-      poke__element.src ="./resources/element/"+eleicon[0]+".png";
+      poke__element.src ="./resources/element/"+poke__element[0]+".png";
       poke__element.setAttribute("class","poke__element-1");
       poke__cardB_d1.appendChild(poke__element);
     } 
-    if(eleicon[1] != undefined){
+    if(poke__element[1] != undefined){
       const poke__element2 = document.createElement("img");
-      poke__element2.src ="./resources/element/"+eleicon[1]+".png";
+      poke__element2.src ="./resources/element/"+poke__element[1]+".png";
       poke__element2.setAttribute("class","poke__element-2");
       poke__cardB_d1.appendChild(poke__element2);  
     }
