@@ -573,6 +573,7 @@ header {
   margin-top: 40px;
   border-radius: 15px;
   background-color: #fff;
+  box-shadow: 2px 2px 2px #d8f0fa;
 }
 
 .poke__name,
@@ -589,30 +590,31 @@ header {
 }
 .poke__id {
   top: 40px;
-  left: 75px;
+  left: 35px;
 }
 .poke__img {
   width: 150px;
   height: 150px;
   position: absolute;
   top: 10px;
-  left: 130px;
+  left: 90px;
   z-index: 0;
 }
 
 .poke__element-1{
   position: absolute;
-  width: 50px;
-  height: 66px;
-  margin-left: 81%;
+  width: 58px;
+  height: 74px;
+  margin-left: 79%;
+  margin-top: 0px;
   /* background-color: #929292; */
 }
 .poke__element-2{
   position: absolute;
-  width: 50px;
-  height: 66px;
-  margin-left: 81%;
-  margin-top: 80px;
+  width: 58px;
+  height: 74px;
+  margin-left: 79%;
+  margin-top: 75px;
   /* background-color: #929292; */
 }
 
