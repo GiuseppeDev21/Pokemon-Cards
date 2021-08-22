@@ -26,6 +26,7 @@ const crearPokemon = (pokemon) => {
   pokemon.types.forEach((element) => {
     poke__array = element.type.name;
    (poke__type[0] != poke__array) ? poke__type.push(poke__array) : alert("Error 404!");
+   console.log(poke__array);
   });
 
   console.log(poke__type);
