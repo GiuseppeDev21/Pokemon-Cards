@@ -25,18 +25,18 @@ const crearPokemon = (pokemon) => {
   const poke__cardB = document.createElement("div");
   poke__cardB.setAttribute("class", "poke__cardB");
 
-  let poke__element = [];
+  let type = [];
 
   pokemon.types.forEach((element) => {
-    poke__array = element.type.name;
-    if (poke__element[0] != poke__array) {
-      let element = poke__element.push(poke__array);
+    poke__t = element.type.name;
+    if (type[0] != poke__t) {
+      let nada = type.push(poke__t);
       }
     });
     // alert(eleicon[0]+" elemento 0");
-    poke__cardB.setAttribute("id", poke__element[0]);
+    poke__cardB.setAttribute("id", type[0]);
     
-    console.log(poke__element);
+    console.log(type);
     const poke__cardB_d1 = document.createElement("div");
     poke__cardB_d1.setAttribute("class", "poke__cardB--d1");
     
@@ -56,15 +56,15 @@ const crearPokemon = (pokemon) => {
     poke__id.textContent = "#" + pokemon.id;
     
 
-    if(poke__element[0] != undefined){
+    if(type[0] != undefined){
       const poke__element = document.createElement("img");
-      poke__element.src ="./resources/element/"+poke__element[0]+".png";
+      poke__element.src ="./resources/element/"+type[0]+".png";
       poke__element.setAttribute("class","poke__element-1");
       poke__cardB_d1.appendChild(poke__element);
     } 
-    if(poke__element[1] != undefined){
+    if(type[1] != undefined){
       const poke__element2 = document.createElement("img");
-      poke__element2.src ="./resources/element/"+poke__element[1]+".png";
+      poke__element2.src ="./resources/element/"+type[1]+".png";
       poke__element2.setAttribute("class","poke__element-2");
       poke__cardB_d1.appendChild(poke__element2);  
     }
