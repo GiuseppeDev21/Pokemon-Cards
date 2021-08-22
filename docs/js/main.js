@@ -25,10 +25,8 @@ const crearPokemon = (pokemon) => {
   let eleicon = [];
   pokemon.types.forEach((element) => {
     poke__algo = element.type.name;
-    if (eleicon[0] != poke__algo) {
-      eleicon.push(poke__algo);
-    }
-    });
+    (eleicon[0] != poke__algo) ? eleicon.push(poke__algo) : alert("Error 1314");
+  });
 
   const poke__cardB = document.createElement("div");
   poke__cardB.setAttribute("class", "poke__cardB");
