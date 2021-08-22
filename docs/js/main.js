@@ -28,6 +28,8 @@ const crearPokemon = (pokemon) => {
    (poke__type[0] != poke__array) ? poke__type.push(poke__array) : alert("Error 404!");
   });
 
+  console.log(poke__type);
+
   const poke__cardB = document.createElement("div");
   poke__cardB.setAttribute("class", "poke__cardB");
   poke__cardB.setAttribute("id", poke__type[0]);
