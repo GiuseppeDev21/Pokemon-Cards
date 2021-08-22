@@ -62,13 +62,13 @@ const crearPokemon = (pokemon) => {
 
     if(eleicon[0] != undefined){
       const poke__element = document.createElement("img");
-      poke__element.src ="/img/"+eleicon[0]+".png";
+      poke__element.src ="./resources/types/"+eleicon[0]+".png";
       poke__element.setAttribute("class","poke__element-1");
       poke__cardB_d1.appendChild(poke__element);
     } 
     if(eleicon[1] != undefined){
       const poke__element2 = document.createElement("img");
-      poke__element2.src ="/img/"+eleicon[1]+".png";
+      poke__element2.src ="./resources/types/"+eleicon[1]+".png";
       poke__element2.setAttribute("class","poke__element-2");
       poke__cardB_d1.appendChild(poke__element2);  
     }
