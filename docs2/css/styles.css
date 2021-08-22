@@ -1,0 +1,822 @@
+:root {
+  /* Header */
+  --nav__bg: #9bb0e9;
+  --linkn__hv: #223bb8;
+  /* Poke-Cards Alphabetic order */
+  --bug__bg: #3c9950;
+  --bug__bs: #5a9768;
+  --bug__ln: #1c4b27;
+  --dark__bg: #595978;
+  --dark__bs: #4b4a4a;
+  --dark__ln: #040707;
+  --dragon__bg: #62cad9;
+  --dragon__bs: #a8a9ac;
+  --dragon__ln: #448a95;
+  --electric__bg: #fdea00;
+  --electric__bs: #a9aba6;
+  --electric__ln: #6a6b6a;
+  --fairy__bg: #ffbee7;
+  --fairy__bs: #ed52cd;
+  --fairy__ln: #bc11f0;
+  --fighting__bg: #ff9677;
+  --fighting__bs: #c26a4f;
+  --fighting__ln: #994025;
+  --fire__bg: #ff3f3f;
+  --fire__bs: #d63939;
+  --fire__ln: #6d0101;
+  --flying__bg: #caced9;
+  --flying__bs: #7d7d7d;
+  --flying__ln: #72737a;
+  --ghost__bg: #c78ff8;
+  --ghost__bs: #a048f0;
+  --ghost__ln: #6100cc;
+  --grass__bg: #9be9a4;
+  --grass__bs: #27cb50;
+  --grass__ln: #147b3d;
+  --ground__bg: #bb9364;
+  --ground__bs: #863737;
+  --ground__ln: #6e491f;
+  --ice__bg: #d8f0fa;
+  --ice__bs: #6a6b6a;
+  --ice__ln: #86d2f5;
+  --normal__bg: #ca98a6;
+  --normal__bs: #cf7b92;
+  --normal__ln: #75525c;
+  --poison__bg: #9369c3;
+  --poison__bs: #aa5edd;
+  --poison__ln: #2d0086;
+  --psychic__bg: #ff85c6;
+  --psychic__bs: #d860cf;
+  --psychic__ln: #92009b;
+  --rock__bg: #cebb9a;
+  --rock__bs: #a47e59;
+  --rock__ln: #755d3b;
+  --steel__bg: #d7e9e3;
+  --steel__bs: #00cccc;
+  --steel__ln: #078b5f;
+  --water__bg: #9bb0e9;
+  --water__bs: #2784cb;
+  --water__ln: #14227b;
+  /* Loading */
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/* Loading Start */
+.preloader{
+  position: fixed;
+  opacity: 0;
+  animation: poke_loader_main  4s ease ;
+}
+.preloader_space{position: relative;}
+
+.preloader img {
+  width: 0;
+  position: absolute;
+  opacity: 0;
+  /* background-color: #62cad9; */
+  animation: poke_loader 4s ease ;
+}
+
+@keyframes poke_loader_main{
+  0%{background-color: #fff;
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    top: 0px;}
+  25%{background-color: #fff;
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    top: 0px;}
+  50%{background-color: #fff;
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    top: 0px;}
+  75%{background-color: #fff;
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    top: 0px;}
+  100%{background-color: #fff;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+      top: 0px;
+      opacity: 0;
+  }
+} 
+
+@keyframes poke_loader {
+  0%{
+    width: 500px;
+    margin-top: 100px;
+    margin-left: 500px;
+    margin-right: 500px;
+    opacity: 1;
+    transform: rotatez(0deg);
+  }
+  25%{
+    width: 500px;
+    margin-top: 100px;
+    margin-left: 500px;
+    margin-right: 500px;
+    opacity: 1;
+    transform: rotateZ(360deg);
+  }
+  50%{
+    width: 500px;
+    margin-top: 100px;
+    margin-left: 500px;
+    margin-right: 500px;
+    opacity: 1;
+    transform: rotateZ(720deg);
+  }
+  75%{
+    width: 500px;
+    margin-top: 100px;
+    margin-left: 500px;
+    margin-right: 500px;
+    opacity: 1;
+    transform: rotateZ(1080deg)
+  }
+  100%{
+    width: 500px;
+    margin-top: 100px;
+    margin-left: 500px;
+    margin-right: 500px;
+    opacity: 1;
+    transform: rotateZ(1440deg);}
+}
+  
+/* Loading End */
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  padding: 20px 1.5%;
+  top: 0px;
+  background-color: var(--nav__bg);
+  z-index: 1;
+}
+.logo,
+.nav__links a,
+.overlay__content a {
+  cursor: pointer;
+  font-family: "Segoe UI";
+  font-size: 25px;
+  font-weight: 500;
+  color: #edf0f1;
+  text-decoration: none;
+}
+
+.nav__links {
+  list-style: none;
+  display: flex;
+}
+
+.nav__links li {
+  padding: 0px 10px;
+}
+
+.nav__links li a {
+  text-decoration: underline;
+  transition: color 0.3s ease 0s;
+}
+
+.nav__links li a:hover {
+  color: var(--linkn__hv);
+}
+
+.cta__icons {
+  width: 50px;
+  margin-right: 50px;
+  cursor: pointer;
+}
+
+.header__wave {
+  width: 100%;
+  height: 120px;
+  margin-top: 84px;
+  overflow: hidden;
+  fill: var(--nav__bg);
+}
+
+/* Mobile Nav */
+
+.menu {
+  display: none;
+}
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  background-color: var(--nav__bg);
+  overflow-x: hidden;
+  transition: width 0.5s ease 0s;
+}
+
+.overlay--active {
+  width: 100%;
+}
+
+.overlay__content {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay a {
+  padding: 15px;
+  font-size: 36px;
+  display: block;
+  transition: color 0.3s ease 0s;
+}
+.overlay img {
+  width: 50px;
+  margin: 0;
+  transition: color 0.3s ease 0s;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+  color: #223bb8;
+}
+
+.overlay .close {
+  position: absolute;
+  top: -20px;
+  right: 10px;
+  font-size: 60px;
+  color: #edf0f1;
+}
+
+/*////////// body ///////////////*/
+
+.container {
+  display: flex;
+}
+
+.container p {
+  width: 100%;
+  font-size: 30px;
+  overflow: hidden;
+  padding: 70px;
+  text-align: justify;
+  font-family: "Segoe UI";
+  font-weight: bold;
+  animation: pokebody 2s 3s ease-in-out;
+}
+
+.container img {
+  width: 36%;
+  margin-top: -65px;
+  animation: pokebody_2 1s 3s ease-in-out;
+}
+
+/*//////////    body         ///////*/
+
+/*/////////// poke nav   ///////*/
+.poke__ball{
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  width: 100px;
+  margin: 0 auto;
+}
+
+.poke__ball_img0{
+  position: absolute;
+  margin-left: -300px;
+  animation: poke__ball_img0 4s 4s infinite;
+}
+@keyframes poke__ball_img0 {
+  0%{transform: rotateZ(0deg);}
+  25%{transform: rotatez(-40deg);margin-left: -600px;}
+  50%{transform: rotatez(40deg);}
+  75%{transform: rotatez(-40deg);margin-left: -600px;}
+  100%{transform: rotatez(360deg);}
+}
+
+.poke__ball_img1{
+  position: absolute;
+  margin-left: -200px;
+  animation: poke__ball_img1 4s 4s infinite;
+}
+@keyframes poke__ball_img1 {
+  0%{transform: rotateZ(0deg);}
+  25%{transform: rotatez(-40deg);margin-left: -400px;}
+  50%{transform: rotatez(40deg);}
+  75%{transform: rotatez(-40deg);margin-left: -400px;}
+  100%{transform: rotatez(360deg);}
+}
+
+.poke__ball_img2{
+  position: absolute;
+  margin-left: -100px;
+  animation: poke__ball_img2 4s 4s infinite;
+}
+
+@keyframes poke__ball_img2 {
+  0%{transform: rotateZ(0deg);}
+  25%{transform: rotatez(-40deg);margin-left: -200px;}
+  50%{transform: rotatez(40deg);}
+  75%{transform: rotatez(-40deg);margin-left: -200px;}
+  100%{transform: rotatez(360deg);}
+}
+
+.poke__ball_img3{
+  position: absolute;
+  animation: poke__ball_img3 4s 4s infinite;
+}
+@keyframes poke__ball_img3 {
+  0%{transform: rotateZ(0deg);}
+  25%{transform: rotatez(-40deg);}
+  50%{transform: rotatez(40deg);}
+  75%{transform: rotatez(-40deg);}
+  100%{transform: rotatez(360deg);}
+}
+
+.poke__ball_img4{
+  position: absolute;
+  margin-left: 100px;
+  animation: poke__ball_img4 4s 4s infinite;
+}
+@keyframes poke__ball_img4 {
+  0%{transform: rotateZ(0deg);}
+  25%{transform: rotatez(-40deg);margin-left: 200px;}
+  50%{transform: rotatez(40deg);}
+  75%{transform: rotatez(-40deg);margin-left: 200px;}
+  100%{transform: rotatez(360deg);}
+}
+
+.poke__ball_img5{
+  position: absolute;
+  margin-left: 200px;
+  animation: poke__ball_img5 4s 4s infinite;
+}
+
+@keyframes poke__ball_img5 {
+  0%{transform: rotateZ(0deg);}
+  25%{transform: rotatez(-40deg);margin-left: 400px;}
+  50%{transform: rotatez(40deg);}
+  75%{transform: rotatez(-40deg);margin-left: 400px;}
+  100%{transform: rotatez(360deg);}
+}
+.poke__ball_img6{
+  position: absolute;
+  margin-left: 300px;
+  animation: poke__ball_img6 4s 4s infinite;
+}
+@keyframes poke__ball_img6 {
+  0%{transform: rotateZ(0deg);}
+  25%{transform: rotatez(-40deg);margin-left: 600px;}
+  50%{transform: rotatez(40deg);}
+  75%{transform: rotatez(-40deg);margin-left: 600px;}
+  100%{transform: rotatez(360deg);}
+}
+
+.pokemon__nav form {
+  width: 100%;
+  display: flex;
+  margin-top: 120px;
+  /* background-color: rgba(23, 81, 175, 0.424); */
+}
+
+.pokemon__nav input[type="text"] {
+  outline: none;
+  border: 0;
+  text-transform: capitalize;
+}
+
+.btn {
+  height: 45px;
+  border-radius: 10px;
+  border: 0px solid;
+  font-size: 21px;
+  font-family: "Segoe UI";
+  font-weight: bold;
+  font-style: italic;
+  color: #fff;
+  text-align: center;
+}
+.btn-primary {
+  width: 520px;
+  margin-left: 17%;
+  background-color: #ff3f3f;
+}
+.btn-secondary {
+  width: 416px;
+  margin-left: 5%;
+  background-color: #2784cb;
+}
+/*/////////// poke nav end  ///////*/
+
+/*/////////// poke body ///////*/
+
+.poke__container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.poke__cardB {
+  width: 406px;
+  height: 500px;
+  border-radius: 30px;
+  margin: 0 auto;
+  margin-top: 30px;
+  position: relative;
+  opacity: 1;
+  animation: pokebody 3s;
+  /* background-color: purple; */
+  transition: 0.3s;
+}
+
+.poke__cardB:hover {
+  transform: scale(1.1);
+}
+
+#bug {
+  background-color: var(--bug__bg);
+  box-shadow: 3px 3px 3px var(--bug__bs);
+  border: 1px solid var(--bug__ln);
+  color: var(--bug__bg);
+}
+#dark {
+  background-color: var(--dark__bg);
+  box-shadow: 3px 3px 3px var(--dark__bs);
+  border: 1px solid var(--dark__ln);
+  color: var(--dark__bg);
+}
+#dragon {
+  background-color: var(--dragon__bg);
+  box-shadow: 3px 3px 3px var(--dragon__bs);
+  border: 1px solid var(--dragon__ln);
+  color: var(--dragon__bg);
+}
+#electric {
+  background-color: var(--electric__bg);
+  box-shadow: 3px 3px 3px var(--electric__bs);
+  border: 1px solid var(--electric__ln);
+  color: var(--electric__bg);
+}
+#fairy {
+  background-color: var(--fairy__bg);
+  box-shadow: 3px 3px 3px var(--fairy__bs);
+  border: 1px solid var(--fairy__ln);
+  color: var(--fairy__bg);
+}
+#fighting {
+  background-color: var(--fighting__bg);
+  box-shadow: 3px 3px 3px var(--fighting__bs);
+  border: 1px solid var(--fighting__ln);
+  color: var(--fighting__bg);
+}
+#fire {
+  background-color: var(--fire__bg);
+  box-shadow: 3px 3px 3px var(--fire__bs);
+  border: 1px solid var(--fire__ln);
+  color: var(--fire__bg);
+}
+#flying {
+  background-color: var(--flying__bg);
+  box-shadow: 3px 3px 3px var(--flying__bs);
+  border: 1px solid var(--flying__ln);
+  color: var(--flying__bg);
+}
+#ghost {
+  background-color: var(--ghost__bg);
+  box-shadow: 3px 3px 3px var(--ghost__bs);
+  border: 1px solid var(--ghost__ln);
+  color: var(--ghost__bg);
+}
+#grass {
+  background-color: var(--grass__bg);
+  box-shadow: 3px 3px 3px var(--grass__bs);
+  border: 1px solid var(--grass__ln);
+  color: var(--grass__bg);
+}
+#ground {
+  background-color: var(--ground__bg);
+  box-shadow: 3px 3px 3px var(--ground__bs);
+  border: 1px solid var(--ground__ln);
+  color: var(--ground__bg);
+}
+#ice {
+  background-color: var(--ice__bg);
+  box-shadow: 3px 3px 3px var(--ice__bs);
+  border: 1px solid var(--ice__ln);
+  color: var(--ice__bg);
+}
+#normal {
+  background-color: var(--normal__bg);
+  box-shadow: 3px 3px 3px var(--normal__bs);
+  border: 1px solid var(--normal__ln);
+  color: var(--normal__bg);
+}
+#poison {
+  background-color: var(--poison__bg);
+  box-shadow: 3px 3px 3px var(--poison__bs);
+  border: 1px solid var(--poison__ln);
+  color: var(--poison__bg);
+}
+#psychic {
+  background-color: var(--psychic__bg);
+  box-shadow: 3px 3px 3px var(--psychic__bs);
+  border: 1px solid var(--psychic__ln);
+  color: var(--psychic__bg);
+}
+#rock {
+  background-color: var(--rock__bg);
+  box-shadow: 3px 3px 3px var(--rock__bs);
+  border: 1px solid var(--rock__ln);
+  color: var(--rock__bg);
+}
+#steel {
+  background-color: var(--steel__bg);
+  box-shadow: 3px 3px 3px var(--steel__bs);
+  border: 1px solid var(--steel__ln);
+  color: var(--steel__bg);
+}
+#water {
+  background-color: var(--water__bg);
+  box-shadow: 3px 3px 3px var(--water__bs);
+  border: 1px solid var(--water__ln);
+  color: var(--water__bg);
+}
+
+.poke__cardB--d1 {
+  width: 288px;
+  height: 150px;
+  position: relative;
+  margin: 0 auto;
+  margin-top: 40px;
+  border-radius: 15px;
+  background-color: #fff;
+}
+
+.poke__name,
+.poke__id {
+  left: 2px;
+  font-size: 30px;
+  font-family: "Segoe UI";
+  font-weight: bold;
+  font-style: italic;
+  position: absolute;
+}
+.poke__name {
+  text-transform: uppercase;
+}
+.poke__id {
+  top: 40px;
+  left: 75px;
+}
+.poke__img {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  top: 10px;
+  left: 130px;
+  z-index: 0;
+}
+
+.poke__element-1{
+  position: absolute;
+  width: 50px;
+  height: 66px;
+  margin-left: 81%;
+  /* background-color: #929292; */
+}
+.poke__element-2{
+  position: absolute;
+  width: 50px;
+  height: 66px;
+  margin-left: 81%;
+  margin-top: 80px;
+  /* background-color: #929292; */
+}
+
+.poke__cardB--d2 {
+  width: 401px;
+  height: 236px;
+  margin-top: 20px;
+  position: relative;
+}
+
+.poke__abilities p {
+  font-size: 24px;
+  font-family: "Segoe UI";
+  font-weight: bold;
+  font-style: italic;
+  color: #fff;
+  text-align: center;
+}
+
+.poke__cardB--d2 h1 {
+  text-align: center;
+  font-family: "Segoe UI";
+  font-weight: bold;
+  font-style: italic;
+  color: #fff;
+}
+
+.poke__basestats-1 p,
+.poke__basestats-2 p {
+  font-size: 21px;
+  text-align: center;
+  margin-top: 5px;
+  font-family: "Segoe UI";
+  font-weight: bold;
+  font-style: italic;
+  color: #fff;
+}
+
+.poke__basestats-1 {
+  width: 40%;
+  position: absolute;
+}
+.poke__basestats-2 {
+  position: absolute;
+  margin-left: 40%;
+  width: 60%;
+}
+/*/////////// poke body end ///////*/
+
+
+@keyframes pokebody {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes pokebody_2 {
+  from {
+    transform: translateX(600px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@media screen and (max-height: 570px) {
+  .overlay a {
+    font-size: 20px;
+  }
+  .overlay .close {
+    font-size: 40px;
+    top: 0px;
+    right: 35px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .logo img {
+    width: 300px;
+  }
+  .nav__links,
+  .cta {
+    display: none;
+}
+.menu {
+  display: initial;
+}
+.header__wave {
+  margin-top: 144px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: -50px;
+}
+
+.container p {
+  margin-top: -30px;
+  font-size: 18px;
+  overflow: hidden;
+  padding: 30px;
+}
+
+.container img {
+  width: 50%;
+  height: 50%;
+  margin: 0 auto;
+  margin-top: -30px;
+}
+
+.poke__ball{width: 100%;}
+
+.poke__ball_img0,.poke__ball_img1,.poke__ball_img2,.poke__ball_img3,.poke__ball_img4,.poke__ball_img5,.poke__ball_img6{
+  position:static;
+  width: 35px;
+  margin: 0 auto;
+  animation: poke__ball_img 4s infinite;
+}
+
+@keyframes poke__ball_img {
+  0%{transform: rotateZ(0deg);}
+  25%{transform: rotatez(-40deg);}
+  50%{transform: rotatez(40deg);}
+  75%{transform: rotatez(-40deg);}
+  100%{transform: rotatez(360deg);}
+}
+
+.poke__cardB {
+  width: 350px;
+} 
+
+.btn-primary {
+  width: 50%;
+  margin-left: 5%;
+  margin-top: -80px;
+}
+.btn-secondary {
+  width: 35%;
+  margin-left: 5%;
+  margin-top: -80px;
+}
+
+.poke__container {
+  width: 100%;
+}
+
+.poke__cardB, .poke__cardB--d2{
+  width: 98%;
+}
+
+.poke__cardB--d1{
+  width: 90%;
+}
+
+.poke__cardB:hover{
+  transform: scale(1);
+}
+
+.poke__basestats-1 p,
+.poke__basestats-2 p {
+  font-size: 18px;
+}
+
+@keyframes poke_loader {
+  0%{
+    position: absolute;
+    width: 300px;
+    margin-top: 150px;
+    margin-left: 0px;
+    opacity: 1;
+    transform: rotatez(0deg);
+  }
+  25%{
+    width: 300px;
+    margin-top: 150px;
+    margin-left: 50px;
+    opacity: 1;
+    transform: rotateZ(360deg);
+  }
+  50%{
+    width: 300px;
+    margin-top: 150px;
+    margin-left: 0px;
+    opacity: 1;
+    transform: rotateZ(720deg);
+  }
+  75%{
+    width: 300px;
+    margin-top: 150px;
+    margin-left: 50px;
+    opacity: 1;
+    transform: rotateZ(1080deg)
+  }
+  100%{
+    width: 300px;
+    margin-top: 150px;
+    margin-left: 0px;
+    opacity: 1;
+    transform: rotateZ(1440deg);}
+}
+}

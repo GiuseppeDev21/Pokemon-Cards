@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="621" height="71" viewBox="0 0 621 71">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 37.5px;
+        text-anchor: middle;
+        fill: #fff;
+        font-family: "Segoe UI";
+        font-weight: 700;
+      }
+
+      .cls-2 {
+        font-size: 50px;
+      }
+
+      .cls-3 {
+        font-size: 25px;
+      }
+    </style>
+  </defs>
+  <text id="PokeCard_By_Joseph_Grant" data-name="PokeCard By  Joseph Grant" class="cls-1" x="313.053" y="34.566"><tspan x="313.053">PokeCard<tspan class="cls-2"> <tspan class="cls-3">By </tspan></tspan></tspan><tspan class="cls-3" x="313.053" dy="30">Joseph Grant</tspan></text>
+</svg>
