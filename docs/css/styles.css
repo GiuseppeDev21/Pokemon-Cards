@@ -600,6 +600,22 @@ header {
   z-index: 0;
 }
 
+.poke__element-1{
+  position: absolute;
+  width: 50px;
+  height: 66px;
+  margin-left: 81%;
+  /* background-color: #929292; */
+}
+.poke__element-2{
+  position: absolute;
+  width: 50px;
+  height: 66px;
+  margin-left: 81%;
+  margin-top: 80px;
+  /* background-color: #929292; */
+}
+
 .poke__cardB--d2 {
   width: 401px;
   height: 236px;
