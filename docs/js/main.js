@@ -22,23 +22,18 @@ const Pokemon = (pokemon) => {
 
 
 const crearPokemon = (pokemon) => {
-  const poke__cardB = document.createElement("div");
-  poke__cardB.setAttribute("class", "poke__cardB");
-
   let eleicon = [];
-
   pokemon.types.forEach((element) => {
     poke__algo = element.type.name;
     if (eleicon[0] != poke__algo) {
-      let nada = eleicon.push(poke__algo);
-       console.log(nada);
-       console.log(eleicon);
-      }
+      eleicon.push(poke__algo);
+    }
     });
-    // alert(eleicon[0]+" elemento 0");
-    poke__cardB.setAttribute("id", eleicon[0]);
+
+  const poke__cardB = document.createElement("div");
+  poke__cardB.setAttribute("class", "poke__cardB");
+  poke__cardB.setAttribute("id", eleicon[0]);
     
-    console.log(eleicon);
     const poke__cardB_d1 = document.createElement("div");
     poke__cardB_d1.setAttribute("class", "poke__cardB--d1");
     
