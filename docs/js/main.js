@@ -12,12 +12,15 @@ const Pokemon = (pokemon) => {
     .then((resp) => resp.json())
     .then((data) => crearPokemon(data))
     .catch((error) =>
-      Swal.fire({
-        icon: "error",
-        title: "Something went wrong...",
-        text: "Try to check again the Pokemon name!",
-      })
-    );
+    Swal.fire({
+      title: "Your Pokemon doesn't exist!",
+      text: 'Look again using other pokemon name!',
+      imageUrl: './resources/img/alert.gif',
+      imageWidth: 400,
+      imageHeight: 200,
+      imageAlt: 'Custom image',
+    })
+    ); 
 };
 
 
