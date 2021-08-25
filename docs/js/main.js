@@ -23,7 +23,6 @@ const Pokemon = (pokemon) => {
     ); 
 };
 
-
 const crearPokemon = (pokemon) => {
   let eleicon = [];
   pokemon.types.forEach((element) => {

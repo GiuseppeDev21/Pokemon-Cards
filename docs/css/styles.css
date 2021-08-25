@@ -80,8 +80,9 @@
   animation: preloader 4s;
 }
 .preloader__box{
-  width: 550px;
-  height: 550px;
+  width: 0px;
+  height: 0px;
+  animation: preloader__img 4s;
   /* background-color: brown; */
 }
 
