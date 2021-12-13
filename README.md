@@ -1,4 +1,4 @@
-# PokeCards
+# Pokemon Cards
  pokemon cards <br>
 This is a project to my portfolio. <br>
 In this case, it has a Display Flex <br>
