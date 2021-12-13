@@ -1,5 +1,5 @@
 # Pokemon Cards
- Pokemon cards <br>
 This is a project to my portfolio. <br>
 In this case, it has a Display Flex <br>
-Denpending of the first pokemon's element, the card get othe style.
+Denpending on the first pokemon's element, the card get othe style.
+https://devgiuseppe21.github.io/Pokemon-Cards/
