@@ -1,3 +1,9 @@
+let loader = document.querySelector(".loader");
+window.addEventListener("load", vanish);
+function vanish(){
+  loader.classList.add("loaderDisappear");
+}
+
 const input = document.querySelector("#pokemon");
 const boton = document.querySelector("#boton");
 const div = document.querySelector(".poke__container");
@@ -101,43 +107,27 @@ const crearPokemon = (pokemon) => {
   poke__cardB_d2.appendChild(poke__basestats_2);
   
   const poke__stat_hp = document.createElement("p");
-  poke__stat_hp.textContent =
-  pokemon.stats[0].stat.name.toUpperCase() +
-  ": " +
-  pokemon.stats[0].base_stat;
+  poke__stat_hp.textContent = pokemon.stats[0].stat.name.toUpperCase() + ": " +pokemon.stats[0].base_stat;
   poke__basestats_1.appendChild(poke__stat_hp);
   
   const poke__stat_attack = document.createElement("p");
-  poke__stat_attack.textContent =
-  pokemon.stats[1].stat.name.toUpperCase() +
-  ": " +
-  pokemon.stats[1].base_stat;
+  poke__stat_attack.textContent = pokemon.stats[1].stat.name.toUpperCase() + ": " + pokemon.stats[1].base_stat;
   poke__basestats_1.appendChild(poke__stat_attack);
   
   const poke__stat_defense = document.createElement("p");
-  poke__stat_defense.textContent =
-  pokemon.stats[2].stat.name.toUpperCase() +
-  ": " +
-  pokemon.stats[2].base_stat;
+  poke__stat_defense.textContent = pokemon.stats[2].stat.name.toUpperCase() + ": " + pokemon.stats[2].base_stat;
   poke__basestats_1.appendChild(poke__stat_defense);
   
   const poke__stat_speed = document.createElement("p");
-  poke__stat_speed.textContent =
-  pokemon.stats[5].stat.name.toUpperCase() + ": " + pokemon.stats[5].base_stat;
+  poke__stat_speed.textContent = pokemon.stats[5].stat.name.toUpperCase() + ": " + pokemon.stats[5].base_stat;
   poke__basestats_2.appendChild(poke__stat_speed);
   
   const poke__stat_attack_special = document.createElement("p");
-  poke__stat_attack_special.textContent =
-  pokemon.stats[4].stat.name.toUpperCase() +
-  ": " +
-  pokemon.stats[4].base_stat;
+  poke__stat_attack_special.textContent = pokemon.stats[4].stat.name.toUpperCase() + ": " + pokemon.stats[4].base_stat;
   poke__basestats_2.appendChild(poke__stat_attack_special);
 
   const poke__stat_defense_special = document.createElement("p");
-  poke__stat_defense_special.textContent =
-  pokemon.stats[3].stat.name.toUpperCase() +
-  ": " +
-  pokemon.stats[3].base_stat;
+  poke__stat_defense_special.textContent = pokemon.stats[3].stat.name.toUpperCase() + ": " + pokemon.stats[3].base_stat;
   poke__basestats_2.appendChild(poke__stat_defense_special);
 };
 
