@@ -20,25 +20,21 @@ const Pokemon = (pokemon) => {
     );
 };
 
-
 const crearPokemon = (pokemon) => {
   const poke__cardB = document.createElement("div");
   poke__cardB.setAttribute("class", "poke__cardB");
 
   let eleicon = [];
-
   pokemon.types.forEach((element) => {
-    poke__algo = element.type.name;
-    if (eleicon[0] != poke__algo) {
-      let nada = eleicon.push(poke__algo);
-       console.log(nada);
-       console.log(eleicon);
-      }
-    });
-    // alert(eleicon[0]+" elemento 0");
+    poke_elemento = element.type.name;
+    if (eleicon[0] != poke_elemento) {
+      let nuevoPokeElemento = eleicon.push(poke_elemento);
+    }
+    console.log(eleicon);
+  });
+
     poke__cardB.setAttribute("id", eleicon[0]);
     
-    console.log(eleicon);
     const poke__cardB_d1 = document.createElement("div");
     poke__cardB_d1.setAttribute("class", "poke__cardB--d1");
     
@@ -48,7 +44,7 @@ const crearPokemon = (pokemon) => {
     const pimg = document.createElement("img");
     pimg.src = pokemon.sprites.front_default;
     pimg.setAttribute("class", "poke__img");
-    
+
     const poke__name = document.createElement("p");
     poke__name.setAttribute("class", "poke__name");
     poke__name.textContent = pokemon.name;
@@ -57,7 +53,6 @@ const crearPokemon = (pokemon) => {
     poke__id.setAttribute("class", "poke__id");
     poke__id.textContent = "#" + pokemon.id;
     
-
     if(eleicon[0] != undefined){
       const poke__element = document.createElement("img");
       poke__element.src ="./resources/element/"+eleicon[0]+".png";
@@ -70,7 +65,6 @@ const crearPokemon = (pokemon) => {
       poke__element2.setAttribute("class","poke__element-2");
       poke__cardB_d1.appendChild(poke__element2);  
     }
-    
     
     div.appendChild(poke__cardB);
     poke__cardB.appendChild(poke__cardB_d1);
@@ -91,8 +85,8 @@ const crearPokemon = (pokemon) => {
     pokemon.abilities.forEach((element) => {
       poke__abilitie_name = document.createElement("p");
       poke__abilitie_name.textContent = element.ability.name;
-    poke__cardB_d2_div.appendChild(poke__abilitie_name);
-  });
+      poke__cardB_d2_div.appendChild(poke__abilitie_name);
+    });
   
   const poke__BaseStats = document.createElement("h1");
   poke__BaseStats.textContent = "BASE STATS";
@@ -129,9 +123,7 @@ const crearPokemon = (pokemon) => {
   
   const poke__stat_speed = document.createElement("p");
   poke__stat_speed.textContent =
-  pokemon.stats[5].stat.name.toUpperCase() +
-  ": " +
-  pokemon.stats[5].base_stat;
+  pokemon.stats[5].stat.name.toUpperCase() + ": " + pokemon.stats[5].base_stat;
   poke__basestats_2.appendChild(poke__stat_speed);
   
   const poke__stat_attack_special = document.createElement("p");
