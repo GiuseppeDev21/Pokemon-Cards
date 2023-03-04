@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>PokeCards By GiuseppeDev</title>
+        <link rel="icon" href="resources/pokeIcon.png" />
+        <link rel="stylesheet" href="assets/css/style.css" />
+        <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PokeCards By GiuseppeDev</title>
-    <link rel="icon" href="resources/images/pokeIcon.png">
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
-
-<body>
+  <body>
+    
     <header class="header">
         <div class="logo">
-            <svg class="icon" width="51" height="55" viewBox="0 0 51 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg width="51" height="55" viewBox="0 0 51 55" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                     d="M23.9212 0.0190563C18.7929 0.395344 14.1807 2.20152 10.2566 5.35158C6.41846 8.43714 3.41891 13.1246 2.20404 17.9196C1.94602 18.9194 1.93527 19.0269 2.09653 19.2635L2.2578 19.5215H9.70828H17.1695L17.3845 19.2742C17.5028 19.1452 17.7501 18.8119 17.9328 18.5431C18.3844 17.8766 19.3842 16.8982 20.1368 16.3822C23.3084 14.232 27.2218 14.232 30.3933 16.3822C31.1459 16.8982 32.1458 17.8766 32.5973 18.5431C32.7801 18.8119 33.0273 19.1452 33.1456 19.2742L33.3606 19.5215H40.8219H48.2723L48.4336 19.2635C48.5949 19.0269 48.5841 18.9194 48.3261 17.9196C47.1112 13.1246 44.1117 8.43714 40.2736 5.35158C36.887 2.63157 32.6941 0.793133 28.5441 0.223326C27.4045 0.0620594 24.8243 -0.0454502 23.9212 0.0190563ZM26.8777 1.35219C31.1567 1.68547 35.2421 3.21212 38.7362 5.79238C39.7145 6.52345 41.3702 8.0931 42.4238 9.28647C44.2622 11.3829 46.0361 14.6082 46.8102 17.2853C46.907 17.6293 47.0145 17.9733 47.0467 18.0701C47.1112 18.2099 46.4124 18.2314 40.5531 18.2314H34.0057L33.3821 17.4143C31.2749 14.662 27.7163 13.1354 24.276 13.5009C23.0289 13.6299 22.244 13.8342 21.1797 14.2965C19.567 15.006 18.1694 16.0919 17.148 17.4143L16.5245 18.2314H9.97706C4.11773 18.2314 3.41891 18.2099 3.48342 18.0701C3.51567 17.9733 3.62318 17.6293 3.71994 17.2853C5.17134 12.2968 8.85895 7.5233 13.4712 4.65276C16.3632 2.86809 20.1261 1.62096 23.4159 1.36294C25.0931 1.23393 25.2866 1.23393 26.8777 1.35219Z" />
                 <path
@@ -41,7 +43,37 @@
         </div>
         <nav>
             <ul class="nav-links">
-                <li><a href="https://github.com/GiuseppeDev21/Pokemon-Cards/tree/main/docs" target="_blank">Github</a></li>
+                <li><a href="https://github.com/GiuseppeDev21/Pokemon-Cards" target="_blank">Github</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="https://pokeapi.co/" target="_blank">Api</a></li>
+            </ul>
+        </nav>
+        <input id="btn-random" class="btn-random" type="button" value="Random">
+        <div class="search">
+            <form action="" method="get">
+                <input type="text" name="" id="search-input" placeholder="Search Pokemon" autocomplete="off">
+                <button type="submit" id="search-btn">
+                    <div class="search-img"></div>
+                    <span></span>
+                </button>
+            </form>
+        </div>
+        <div class="toggle">
+            <input class="toggle-input" type="checkbox"/>
+            <div class="toggle-bg"></div>
+            <div class="toggle-switch">
+                <div class="toggle-switch-figure"></div>
+                <div class="toggle-switch-figureAlt"></div>
+            </div>
+        </div>
+        <div class="menu-btn">
+            <div class="menu-btn__stripes"></div>
+        </div>
+    </header>
+    <div class="dropdown-menu">
+        <nav>
+            <ul class="nav-links">
+                <li><a href="https://github.com/GiuseppeDev21/Pokemon-Cards" target="_blank">Github</a></li>
                 <li><a href="#">Portfolio</a></li>
                 <li><a href="https://pokeapi.co/" target="_blank">Api</a></li>
             </ul>
@@ -54,28 +86,20 @@
                 <div class="toggle-switch-figureAlt"></div>
             </div>
         </div>
-        <div class="botton">
-            <!-- <input id="btn-mega" type="button" value="Mega"> -->
-            <input id="btn-random" type="button" value="Random">
-        </div>
-    </header>
-
-    <div id="cover">
-        <form method="get" action="">
-          <div class="tb">
-            <div class="td"><input type="text" id="name" placeholder="Pokemon name or id" autocomplete="off"  required></div>
-            <div class="td" id="s-cover">
-              <button type="submit" id="search">
-                <div id="s-circle"></div>
-                <span></span>
-              </button>
-            </div>
-          </div>
-        </form>
     </div>
-
-    <div id="cards"></div> 
+    <div class="search-container">
+        <div class="search">
+            <form action="" method="get">
+                <input type="text" name="" id="search-input2" placeholder="Search Pokemon" autocomplete="off">
+                <button type="submit" id="search-btn2" class="btn2">
+                    <div class="search-img"></div>
+                    <span></span>
+                </button>
+            </form>
+        </div>
+        <input id="btn-randomn2" class="btn-random" type="button" value="Random">
+    </div>
+    <div id="cards-container"></div>
     <script src="assets/js/main.js"></script>
-</body>
-
+  </body>
 </html>
